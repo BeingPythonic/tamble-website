@@ -1,0 +1,20 @@
+/* Tamble landing page refinements */
+:root { color-scheme: dark; scroll-behavior: smooth; }
+body { margin: 0; background: #13141d; color: #f2e8d9; font: 17px/1.6 Hanken, system-ui, sans-serif; }
+a { transition: color .18s, background-color .18s, filter .18s; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid #edbe7f; outline-offset: 3px; }
+.navlink { color: #cfc7d6; text-decoration: none; }
+.navlink:hover { color: #f2e8d9; }
+.btn-primary { background: #cf8b60 !important; }
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-ghost:hover { background: rgba(242,232,217,.1); }
+input::placeholder { color: #8e8899; }
+video { background: #0f1017; }
+@media (max-width: 700px) {
+  header nav > div { gap: 8px 14px !important; }
+  header nav > div .navlink { font-size: 14px; }
+  #top { min-height: 650px !important; }
+  #top > img { object-position: 64% center !important; }
+  #top h1 { font-size: clamp(68px, 20vw, 108px) !important; }
+  section, footer { scroll-margin-top: 10px; }
+}

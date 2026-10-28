@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<title>Tamble — A world below is waiting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Tamble is a co-op, turn-based tactical RPG. Explore dangerous dungeons with friends, one turn at a time.">
+<meta name="theme-color" content="#13141d">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+<style>@font-face{font-family:Hanken;src:url(assets/hanken-grotesk.woff2) format("woff2");font-weight:100 900;font-display:swap}@font-face{font-family:YoungSerif;src:url(assets/young-serif.woff2) format("woff2");font-weight:400;font-display:swap}</style>
+<style>
+:root{color-scheme:dark;scroll-behavior:smooth}body{margin:0;background:#13141d;color:#f2e8d9;font:17px/1.6 Hanken,system-ui,sans-serif}a{transition:color .18s,background-color .18s,filter .18s}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #edbe7f;outline-offset:3px}.navlink{color:#cfc7d6;text-decoration:none}.navlink:hover{color:#f2e8d9}.btn-primary{background:#cf8b60!important}.btn-primary:hover{filter:brightness(1.08)}.btn-ghost:hover{background:rgba(242,232,217,.1)}input::placeholder{color:#8e8899}@media(max-width:700px){header nav>div{gap:8px 14px!important}.navlink{font-size:14px}#top{min-height:650px!important}#top img{object-position:64% center!important}#top h1{font-size:clamp(68px,20vw,108px)!important}#trailer video{width:100%!important}section,footer{scroll-margin-top:10px}}</style>
+
+
+<div style="background: #13141D; color: #F2E8D9; font-family: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 17px; line-height: 1.6; overflow: hidden">
+
+<!-- NAV -->
+<header style="position: relative; z-index: 2; background: #13141D; border-bottom: 1px solid rgba(242,232,217,0.09)">
+<nav aria-label="Main" style="max-width: 1240px; margin: 0 auto; padding: 18px clamp(20px, 5vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px">
+<a href="#top" style="display: flex; align-items: center; gap: 8px; color: #F2E8D9; text-decoration: none; font-weight: 700; font-size: 19px; letter-spacing: 0.32em">TAMBLE<svg aria-hidden="true" width="12" height="12" viewBox="0 0 20 20" style="margin-top: -10px"><path d="M10 0C10.8 6 14 9.2 20 10C14 10.8 10.8 14 10 20C9.2 14 6 10.8 0 10C6 9.2 9.2 6 10 0Z" fill="#CF8B60"></path></svg></a>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px; font-weight: 500">
+<a class="navlink" href="#game">The game</a>
+<a class="navlink" href="#trailer">Trailer</a>
+<a class="navlink" href="#art">Concept art</a>
+<a class="navlink" href="#team">Team</a>
+<a class="navlink" href="#follow">Follow along</a>
+<a class="btn-primary" href="#wishlist" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #CF8B60; color: #1A1210; text-decoration: none; font-weight: 700; border-radius: 3px">Wishlist on Steam</a>
+</div>
+</nav>
+</header>
+
+<!-- HERO -->
+<section id="top" style="position: relative; min-height: 780px; display: flex; align-items: center">
+<img src="assets/hero.webp" alt="A party of four adventurers stands in a torch-lit dungeon, surrounded by skeletons and slimes, beside an underground waterfall." style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% center">
+<div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(19,20,29,0.96) 0%, rgba(19,20,29,0.86) 34%, rgba(19,20,29,0.35) 62%, rgba(19,20,29,0.05) 82%)"></div>
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 160px; background: linear-gradient(0deg, #13141D, rgba(19,20,29,0))"></div>
+<div style="position: relative; width: 100%; max-width: 1240px; margin: 0 auto; padding: clamp(64px, 9vw, 120px) clamp(20px, 5vw, 48px)">
+<div style="max-width: 560px; display: flex; flex-direction: column; gap: 26px">
+<p style="margin: 0; color: #CFC7D6; font-size: 16px">A game by Paper Arcane Studios</p>
+<h1 style="margin: 0; font-family: 'Young Serif', Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(84px, 11vw, 168px); line-height: 0.88; letter-spacing: -0.035em; color: #F2E8D9">Tamble</h1>
+<p style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.25; color: #EDBE7F">A world below is waiting.</p>
+<p style="margin: 0; color: #E2DBE6; font-size: 19px; max-width: 30em">A pixel-art, turn-based tactical RPG. Gather a party of up to six friends, head underground, and fight your way through whole dungeons of tactics, puzzles and bosses.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 6px">
+<a class="btn-primary" href="#wishlist" style="display: inline-flex; align-items: center; min-height: 56px; padding: 0 28px; background: #CF8B60; color: #1A1210; text-decoration: none; font-weight: 700; font-size: 18px; border-radius: 3px">Wishlist on Steam</a>
+<a class="btn-ghost" href="#trailer" style="display: inline-flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 24px; border: 1px solid rgba(242,232,217,0.35); background: rgba(19,20,29,0.4); color: #F2E8D9; text-decoration: none; font-weight: 600; font-size: 18px; border-radius: 3px"><svg aria-hidden="true" width="14" height="16" viewBox="0 0 14 16"><path d="M1 1.5v13l12-6.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"></path></svg>Watch the teaser</a>
+</div>
+<p style="margin: 0; color: #CFC7D6; font-size: 15px">Coming to Steam for Windows · Release date to be announced</p>
+</div>
+</div>
+</section>
+
+<!-- TRAILER -->
+<section id="trailer" style="background: #0F1017; border-top: 1px solid rgba(242,232,217,0.07); border-bottom: 1px solid rgba(242,232,217,0.07)">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(64px, 8vw, 112px) clamp(20px, 5vw, 48px); display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 40px">
+<h2 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.05; letter-spacing: -0.02em">See it in motion</h2>
+<p style="margin: 0; color: #ADA6B8; max-width: 26em">A first look while we cut the full trailer. More gameplay and devlogs will land here as the game grows.</p>
+</div>
+
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 14px">
+<div style="position: relative; aspect-ratio: 16 / 9; width: 100%; background: #1B1C28; border: 1px solid rgba(207,139,96,0.3); border-radius: 4px; overflow: hidden">
+<video src="assets/trailer.mp4" autoplay="autoplay" muted="muted" loop="loop" playsinline="playsinline" aria-label="Teaser loop: the party explores the dungeon, plans a turn-based battle and opens a treasure chest." style="display: block; width: 100%; height: 100%; object-fit: cover"></video>
+</div>
+<figcaption style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; color: #ADA6B8; font-size: 15px"><span style="color: #F2E8D9; font-weight: 600">Teaser loop</span><span>Full announcement trailer coming soon</span></figcaption>
+</figure>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<a href="#trailer" style="display: flex; flex-direction: column; gap: 12px; color: #F2E8D9; text-decoration: none">
+<div style="position: relative; aspect-ratio: 16 / 9; border: 1px solid rgba(242,232,217,0.1); border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="assets/combat.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7"><span style="position: relative; width: 52px; height: 52px; border-radius: 50%; background: rgba(19,20,29,0.7); border: 1px solid rgba(242,232,217,0.5); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="16" viewBox="0 0 14 16" style="margin-left: 3px"><path d="M1 1.5v13l12-6.5z" fill="#F2E8D9"></path></svg></span></div>
+<span style="font-weight: 600">Gameplay first look</span>
+<span style="margin-top: -10px; color: #ADA6B8; font-size: 15px">Coming soon</span>
+</a>
+<a href="#trailer" style="display: flex; flex-direction: column; gap: 12px; color: #F2E8D9; text-decoration: none">
+<div style="position: relative; aspect-ratio: 16 / 9; border: 1px solid rgba(242,232,217,0.1); border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="assets/classes.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7"><span style="position: relative; width: 52px; height: 52px; border-radius: 50%; background: rgba(19,20,29,0.7); border: 1px solid rgba(242,232,217,0.5); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="16" viewBox="0 0 14 16" style="margin-left: 3px"><path d="M1 1.5v13l12-6.5z" fill="#F2E8D9"></path></svg></span></div>
+<span style="font-weight: 600">Devlog 1: Meet the party</span>
+<span style="margin-top: -10px; color: #ADA6B8; font-size: 15px">Coming soon</span>
+</a>
+<a href="#trailer" style="display: flex; flex-direction: column; gap: 12px; color: #F2E8D9; text-decoration: none">
+<div style="position: relative; aspect-ratio: 16 / 9; border: 1px solid rgba(242,232,217,0.1); border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center"><img src="assets/loot.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.7"><span style="position: relative; width: 52px; height: 52px; border-radius: 50%; background: rgba(19,20,29,0.7); border: 1px solid rgba(242,232,217,0.5); display: flex; align-items: center; justify-content: center"><svg aria-hidden="true" width="14" height="16" viewBox="0 0 14 16" style="margin-left: 3px"><path d="M1 1.5v13l12-6.5z" fill="#F2E8D9"></path></svg></span></div>
+<span style="font-weight: 600">Devlog 2: Going deeper</span>
+<span style="margin-top: -10px; color: #ADA6B8; font-size: 15px">Coming soon</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- THE GAME -->
+<section id="game">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 48px); display: flex; flex-direction: column; gap: clamp(56px, 7vw, 96px)">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px">
+<h2 style="flex: 1 1 320px; margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.05; letter-spacing: -0.02em">What is Tamble?</h2>
+<div style="flex: 1.4 1 420px; display: flex; flex-direction: column; gap: 18px; color: #CFC7D6; font-size: 19px; line-height: 1.65; max-width: 36em">
+<p style="margin: 0">Tamble is a retro pixel-art, top-down tactical RPG you play with friends. Form a party of up to six, descend into the dungeon, and take it on one turn at a time: positioning, combos, puzzles, and enemies that are smarter than they look.</p>
+<p style="margin: 0">Every floor down is harder than the last, and the loot gets better to match. Level up, grow through more than 55 classes, and build your character exactly the way you want to play.</p>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px 64px">
+<img src="assets/combat.webp" alt="Turn-based combat: the party’s movement range glows blue while skeletons and a slime wait on red tiles." style="flex: 1.5 1 480px; min-width: 0; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; border: 1px solid rgba(207,139,96,0.25)">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.15">Tactics with your whole crew</h3>
+<p style="margin: 0; color: #CFC7D6">Clear entire dungeons together in turn-based battles where every move counts. Plan your positions, cover each other, and outsmart dastardly enemy AI on the way to epic boss fights.</p>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; flex-direction: row-reverse; align-items: center; gap: 32px 64px">
+<img src="assets/classes.webp" alt="The party screen: a Fighter’s stats, equipment slots, skills, passive traits and inventory." style="flex: 1.5 1 480px; min-width: 0; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; border: 1px solid rgba(207,139,96,0.25)">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.15">55+ classes to grow into</h3>
+<p style="margin: 0; color: #CFC7D6">Level up your characters and move through more than 55 classes. Mix and match skills and item loadouts until your build plays exactly how you want it to.</p>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 32px 64px">
+<img src="assets/loot.webp" alt="Deep in the Forgotten Depths, the party opens a glowing treasure chest full of weapons, armor and gold." style="flex: 1.5 1 480px; min-width: 0; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; border: 1px solid rgba(207,139,96,0.25)">
+<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px">
+<h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(28px, 2.8vw, 36px); line-height: 1.15">The deeper you go, the better it gets</h3>
+<p style="margin: 0; color: #CFC7D6">Each level down brings tougher challenges, nastier enemies and better and better loot. Push your luck, or head back up with what you’ve found.</p>
+</div>
+</div>
+
+<ul style="list-style: none; margin: 0; padding: 40px 0 0; border-top: 1px solid rgba(242,232,217,0.1); display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px 40px">
+<li style="display: flex; flex-direction: column; gap: 10px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 20 20"><path d="M10 0C10.8 6 14 9.2 20 10C14 10.8 10.8 14 10 20C9.2 14 6 10.8 0 10C6 9.2 9.2 6 10 0Z" fill="#EDBE7F"></path></svg><h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 24px">One-of-a-kind loot</h3><p style="margin: 0; color: #ADA6B8">The rarest drops are serialized items that live in your Steam inventory. Nobody else has yours.</p></li>
+<li style="display: flex; flex-direction: column; gap: 10px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 20 20"><path d="M10 0C10.8 6 14 9.2 20 10C14 10.8 10.8 14 10 20C9.2 14 6 10.8 0 10C6 9.2 9.2 6 10 0Z" fill="#EDBE7F"></path></svg><h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 24px">Achievements and titles</h3><p style="margin: 0; color: #ADA6B8">Earn achievements and unlock titles that show everyone where you’ve been.</p></li>
+<li style="display: flex; flex-direction: column; gap: 10px"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 20 20"><path d="M10 0C10.8 6 14 9.2 20 10C14 10.8 10.8 14 10 20C9.2 14 6 10.8 0 10C6 9.2 9.2 6 10 0Z" fill="#EDBE7F"></path></svg><h3 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: 24px">Party vs. party <span style="font-family: 'Hanken Grotesk', system-ui, sans-serif; font-size: 14px; color: #CF8B60; vertical-align: middle; margin-left: 6px">Planned</span></h3><p style="margin: 0; color: #ADA6B8">Down the road: take your party up against other players in live turn-based battles.</p></li>
+</ul>
+</div>
+</section>
+
+<!-- CONCEPT ART -->
+<section id="art" style="background: #181924">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 48px); display: flex; flex-direction: column; gap: 40px">
+<div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 40px">
+<h2 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.05; letter-spacing: -0.02em">From the sketchbook</h2>
+<p style="margin: 0; color: #ADA6B8; max-width: 28em">Character sheets, creatures and maps from the studio. Things will change on the way to launch, and that’s half the fun.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: 28px 24px">
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/ranger.webp" alt="Character sheet for the Ranger: idle, walk, bow attack and skill animations, portraits and palette." style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px"><figcaption style="color: #CFC7D6; font-size: 15px">Character: the Ranger</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/ruins.webp" alt="Environment sheet for the Ancient Ruins: a crumbling stone room with a waterfall, plus key tiles, props and palette." style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px"><figcaption style="color: #CFC7D6; font-size: 15px">Environment: the Ancient Ruins</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/golem.webp" alt="Creature sheet for the Stone Golem: a mossy rock giant with size comparison, attack patterns and color variants." style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px"><figcaption style="color: #CFC7D6; font-size: 15px">Creature: the Stone Golem</figcaption></figure>
+<figure style="margin: 0; display: flex; flex-direction: column; gap: 12px"><img src="assets/dungeon.webp" alt="Dungeon layout for B3, the Forgotten Depths, with stairs, chests, a locked door and the boss room marked." style="width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 4px"><figcaption style="color: #CFC7D6; font-size: 15px">Dungeon layout: B3, the Forgotten Depths</figcaption></figure>
+</div>
+</div>
+</section>
+
+<!-- WISHLIST BAND -->
+<section aria-labelledby="wishlist-heading">
+<div style="max-width: 820px; margin: 0 auto; padding: clamp(72px, 8vw, 120px) clamp(20px, 5vw, 48px) clamp(88px, 10vw, 144px); display: flex; flex-direction: column; align-items: center; gap: 24px; text-align: center">
+<img src="assets/logo.png" alt="" style="width: clamp(180px, 22vw, 260px); height: auto; margin-bottom: 4px">
+<h2 id="wishlist-heading" style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(38px, 5vw, 68px); line-height: 1.05; letter-spacing: -0.02em">Put Tamble on your Steam wishlist</h2>
+<p style="margin: 0; color: #CFC7D6; font-size: 19px; max-width: 30em">It’s the single biggest way to help a small studio. Wishlists help Steam show Tamble to more players, and Steam will let you know the day it comes out.</p>
+<a class="btn-primary" href="#wishlist" style="margin-top: 8px; display: inline-flex; align-items: center; min-height: 60px; padding: 0 36px; background: #CF8B60; color: #1A1210; text-decoration: none; font-weight: 700; font-size: 19px; border-radius: 3px">Wishlist on Steam</a>
+</div>
+</section>
+
+<!-- TEAM -->
+<section id="team" style="background: #181924; border-top: 1px solid rgba(242,232,217,0.07)">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 128px) clamp(20px, 5vw, 48px); display: flex; flex-direction: column; gap: 48px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px">
+<h2 style="flex: 1 1 320px; margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.4vw, 58px); line-height: 1.05; letter-spacing: -0.02em">Made by family and friends</h2>
+<p style="flex: 1.4 1 420px; margin: 0; color: #CFC7D6; font-size: 19px; max-width: 32em; align-self: end">We wanted a game we could all play together, with everything we love in one place: hack and slash, exploration, loot, extraction, turn-based combat and strategy. So we started making it.</p>
+</div>
+
+<ul style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px">
+<li style="display: flex; flex-direction: column; background: #1F202C; border-radius: 4px; overflow: hidden"><img src="assets/hominaut.webp" alt="Pixel-art portrait of Hominaut: a bearded adventurer in glasses and a dark hooded cloak." style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block"><div style="padding: 18px 20px 22px"><p style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-size: 23px">Hominaut</p><p style="margin: 2px 0 0; color: #ADA6B8; font-size: 15px">Creator and lead developer</p></div></li>
+<li style="display: flex; flex-direction: column; background: #1F202C; border-radius: 4px; overflow: hidden"><img src="assets/tangerine.webp" alt="Pixel-art portrait of TangerinePanda: a smiling ranger in glasses with a squirrel on her shoulder." style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block"><div style="padding: 18px 20px 22px"><p style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-size: 23px">TangerinePanda</p><p style="margin: 2px 0 0; color: #ADA6B8; font-size: 15px">Artist, The Paper Coven</p></div></li>
+<li style="display: flex; flex-direction: column; background: #1F202C; border-radius: 4px; overflow: hidden"><img src="assets/warriorsmage.webp" alt="Pixel-art portrait of Warriorsmage: drawing on a tablet in a green hoodie, in a cosy room full of figures and posters." style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block"><div style="padding: 18px 20px 22px"><p style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-size: 23px">Warriorsmage</p><p style="margin: 2px 0 0; color: #ADA6B8; font-size: 15px">Technical art lead, The Paper Coven</p></div></li>
+<li style="display: flex; flex-direction: column; background: #1F202C; border-radius: 4px; overflow: hidden"><img src="assets/deepdelver.webp" alt="Pixel-art portrait of DeepDelver: grinning and holding up a small clay dragon, with clay monsters on the desk." style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block"><div style="padding: 18px 20px 22px"><p style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-size: 23px">DeepDelver</p><p style="margin: 2px 0 0; color: #ADA6B8; font-size: 15px">Artist, The Paper Coven</p></div></li>
+<li style="display: flex; flex-direction: column; background: #1F202C; border-radius: 4px; overflow: hidden"><img src="assets/feedback.webp" alt="Pixel-art portrait of Feedback: a bearded musician in glasses at his studio desk, guitars on the wall behind him." style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block"><div style="padding: 18px 20px 22px"><p style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-size: 23px">Feedback</p><p style="margin: 2px 0 0; color: #ADA6B8; font-size: 15px">Producer</p></div></li>
+</ul>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px 48px; padding-top: 48px; border-top: 1px solid rgba(207,139,96,0.25)">
+<img src="assets/darth-savan.webp" alt="Pixel-art portrait of Darth Savan: a bearded man with a mug at a candlelit table of dice, books and miniatures." style="flex: none; width: 220px; max-width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; border: 1px solid rgba(237,190,127,0.45)">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 14px; max-width: 40em">
+<p style="margin: 0; display: flex; align-items: center; gap: 14px; font-family: 'Young Serif', Georgia, serif; font-size: clamp(26px, 2.6vw, 34px); color: #EDBE7F"><svg aria-hidden="true" width="24" height="24" viewBox="0 0 20 20" style="flex: none"><path d="M10 0C10.8 6 14 9.2 20 10C14 10.8 10.8 14 10 20C9.2 14 6 10.8 0 10C6 9.2 9.2 6 10 0Z" fill="#EDBE7F"></path></svg>For Darth Savan</p>
+<p style="margin: 0; color: #CFC7D6; font-size: 18px; line-height: 1.7">Darth Savan was a lifelong storyteller who loved fantasy, role-playing games and Star Wars. For him, it was never about the game. It was about the people around the table. He claimed to hate everyone, and spent his whole life loving people.</p>
+<p style="margin: 0; color: #F2E8D9; font-size: 18px">Tamble is dedicated to him.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOLLOW -->
+<section id="follow">
+<div style="max-width: 1240px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 5vw, 48px); display: flex; flex-wrap: wrap; gap: 48px 80px">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-family: 'Young Serif', Georgia, serif; font-weight: 400; font-size: clamp(36px, 4.4vw, 52px); line-height: 1.05; letter-spacing: -0.02em">Follow along</h2>
+<p style="margin: 0; color: #CFC7D6; max-width: 30em">We share progress as we go: new art, rough builds and the occasional playtest. Come say hello.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 4px">
+<a class="btn-ghost" href="#follow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1px solid rgba(242,232,217,0.28); border-radius: 3px; color: #F2E8D9; text-decoration: none; font-weight: 600">Join the Discord</a>
+<a class="btn-ghost" href="#trailer" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1px solid rgba(242,232,217,0.28); border-radius: 3px; color: #F2E8D9; text-decoration: none; font-weight: 600">YouTube</a>
+<a class="btn-ghost" href="#follow" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border: 1px solid rgba(242,232,217,0.28); border-radius: 3px; color: #F2E8D9; text-decoration: none; font-weight: 600">Social</a>
+</div>
+</div>
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 14px; padding: 32px; background: #1B1C28; border: 1px solid rgba(207,139,96,0.22); border-radius: 4px; align-self: start">
+<label for="email" style="font-family: 'Young Serif', Georgia, serif; font-size: 24px">Get the occasional email</label>
+<p style="margin: 0; color: #ADA6B8; font-size: 15px">Big news only: trailers, playtests and launch day.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 6px">
+<input id="email" type="email" placeholder="you@example.com" style="flex: 1 1 220px; min-height: 52px; padding: 0 16px; background: #13141D; border: 1px solid rgba(242,232,217,0.22); border-radius: 3px; color: #F2E8D9; font: inherit">
+<button class="btn-primary" style="min-height: 52px; padding: 0 24px; border: none; border-radius: 3px; background: #CF8B60; color: #1A1210; font: inherit; font-weight: 700; cursor: pointer">Sign up</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="border-top: 1px solid rgba(242,232,217,0.09)">
+<div style="max-width: 1240px; margin: 0 auto; padding: 40px clamp(20px, 5vw, 48px) 48px; display: flex; flex-direction: column; gap: 28px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px">
+<p style="margin: 0; font-weight: 700; letter-spacing: 0.32em; font-size: 16px">TAMBLE</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 28px; font-size: 15px">
+<a class="navlink" href="#art">Press kit</a>
+<a class="navlink" href="mailto:hello@paperarcane.com">Contact</a>
+<a class="navlink" href="#top">Privacy</a>
+<a class="navlink" href="#wishlist">Steam store page</a>
+</div>
+</div>
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 40px; color: #8E8899; font-size: 13px; line-height: 1.55">
+<p style="margin: 0">© 2026 Paper Arcane Studios</p>
+<p style="margin: 0; max-width: 46em">© 2026 Valve Corporation. Steam and the Steam logo are trademarks and/or registered trademarks of Valve Corporation in the U.S. and/or other countries.</p>
+</div>
+</div>
+</footer>
+
+</div>
+
+<script src="site.js"></script>
+</body></html>
